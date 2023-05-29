@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./stylesCarrusel.scss";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import { AppContext } from "../../router/Router";
+import { AppContext } from "../../router/Routers";
 
 const Carrusels = ({
   items,

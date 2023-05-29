@@ -3,7 +3,7 @@ import { CardsHome } from "../../../services/infoCards";
 import CardHome from "../cardHome/CardHome";
 import Carrusels from "../../carrusels/Carrusels";
 import { useContext } from "react";
-import { AppContext } from "../../../router/Router";
+import { AppContext } from "../../../router/Routers";
 
 const CarruselCardsHome = () => {
   const { width } = useContext(AppContext);

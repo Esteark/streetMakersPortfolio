@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import "./stylesModal.scss";
 import { motion, AnimatePresence } from "framer-motion";
-import { AppContext } from "../../router/Router";
+import { AppContext } from "../../router/Routers";
 import { IoCloseCircle } from "react-icons/io5";
 
 const ModalVideo = () => {

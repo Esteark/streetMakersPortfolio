@@ -4,7 +4,7 @@ import street from "../../assets/img/streetmakers.png";
 import streetmakers from "../../assets/img/steetmakersvertical.png";
 import streetDesk from "../../assets/img/Desktop/streetDesk.png";
 import steetmakersDesk from "../../assets/img/Desktop/steetmakersDesk.png";
-import { AppContext } from "../../router/Router";
+import { AppContext } from "../../router/Routers";
 
 const Footer = () => {
   const { width } = useContext(AppContext);
