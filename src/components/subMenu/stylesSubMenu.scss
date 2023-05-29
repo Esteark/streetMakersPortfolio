@@ -1,0 +1,39 @@
+@use "../../vars.scss" as v;
+.subMenu {
+  width: 100%;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  border-top: 1px solid v.$mainWhite;
+  border-bottom: 1px solid v.$mainWhite;
+  &_info {
+    color: v.$mainWhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.1s;
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      transition: 0.2s;
+      cursor: pointer;
+      &:hover {
+        color: v.$green;
+        transition: 0.2s;
+      }
+    }
+    div {
+      display: flex;
+      gap: 15px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .subMenu {
+    border-right: 1px solid v.$mainWhite;
+    padding: 30px 5%;
+  }
+}

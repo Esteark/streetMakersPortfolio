@@ -1,0 +1,26 @@
+@use "../../vars.scss" as v;
+.secLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5%;
+  transform: translateY(-100px);
+  figure {
+    background: v.$mainWhite;
+    width: 175px;
+    height: 175px;
+    clip-path: circle(48% at 50% 50%);
+    display: flex;
+    justify-content: center;
+  }
+  .separador {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px 10px 0px 0px;
+    border-width: 2px 2px 0;
+    border-style: solid;
+    border-color: v.$mainWhite;
+    background-color: v.$mainBlackColor;
+    transform: translateY(-20px);
+  }
+}

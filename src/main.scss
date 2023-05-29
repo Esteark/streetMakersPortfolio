@@ -1,0 +1,29 @@
+@use "./vars.scss" as v;
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: v.$mainBlackColor;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: v.$secondaryBlackColor;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: v.$green;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}

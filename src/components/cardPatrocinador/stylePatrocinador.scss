@@ -1,0 +1,66 @@
+@use "../../vars.scss" as v;
+.secPatrocinadores {
+  border-top: 1px solid v.$mainWhite;
+  border-bottom: 1px solid v.$mainWhite;
+  overflow: hidden;
+  width: 100%;
+  height: 250px;
+  .slide-track {
+    display: flex;
+    height: inherit;
+    gap: 10px;
+    align-items: center;
+    animation: slide 20s linear infinite;
+    width: max-content;
+
+    .item {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: v.$secondaryBlackColor;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      img {
+        width: 55%;
+        object-fit: cover;
+      }
+    }
+    .item-1 {
+      img {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .secPatrocinadores {
+    height: 450px;
+
+    .slide-track {
+      .item {
+        width: 340px;
+        height: 340px;
+        img {
+          width: 60%;
+        }
+      }
+      .item-1 {
+        img {
+          width: 35%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-180px * 5);
+  }
+}

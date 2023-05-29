@@ -1,0 +1,75 @@
+@use "../../vars.scss" as v;
+footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  height: 200px;
+
+  h3 {
+    font-size: 14px;
+    font-weight: 400;
+    color: v.$mainWhite;
+  }
+  .icon2 {
+    width: 95px;
+    height: 17px;
+  }
+  .icon3 {
+    width: 130;
+    height: 18px;
+  }
+  a {
+    color: v.$mainWhite;
+    text-decoration: underline;
+    font-weight: 400;
+  }
+  .secRedes {
+    width: auto;
+    display: flex;
+    gap: 10px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 300) {
+  footer {
+    height: 150px;
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    justify-content: space-between;
+    padding: 50px 15%;
+    .icon2 {
+      width: 46;
+      height: 63;
+    }
+    .icon3 {
+      width: 330px;
+      height: 45px;
+    }
+
+    .secRedes {
+      width: "100%";
+      display: flex;
+      gap: 10px;
+      justify-content: "center";
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  footer {
+    .secRedes {
+      width: auto;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+    }
+  }
+}

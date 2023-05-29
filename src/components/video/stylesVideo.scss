@@ -1,0 +1,18 @@
+.secVideo {
+  width: 100%;
+  height: 470px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 768px) {
+  .secVideo {
+    height: 870px;
+    img {
+      width: 100%;
+    }
+  }
+}

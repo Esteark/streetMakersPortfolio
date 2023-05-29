@@ -1,0 +1,9 @@
+.secInfoMain {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .secInfoMain {
+    flex-direction: row;
+  }
+}
