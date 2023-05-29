@@ -36,7 +36,7 @@ const Carrusels = ({
       itemsFit: "fill",
     },
     1075: {
-      items: 3,
+      items: 4,
       itemsFit: "fill",
     },
   };

@@ -25,8 +25,8 @@ const CarruselCardsHome = () => {
       items={renderCardsHome()}
       height={width <= 768 ? "400px" : "600px"}
       margintop={width <= 768 ? "90px" : "120px"}
-      paddingLeft={width <= 768 ? "0px" : "5%"}
-      paddingRight={width <= 768 ? "0px" : "5%"}
+      paddingLeft={"0px"}
+      paddingRight={"0px"}
     />
   );
 };
