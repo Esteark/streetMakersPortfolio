@@ -1,0 +1,152 @@
+@use "../../../vars.scss" as v;
+.CardHome {
+  width: 180px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+  .CardHome_article1 {
+    display: flex;
+    justify-content: end;
+    transform: translate(82px, 160px);
+    position: absolute;
+    .secText {
+      background: v.$green;
+      padding: 0 20px;
+      width: 98px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: v.$mainBlackColor;
+      }
+    }
+  }
+  .CardHome_figcap {
+    width: inherit;
+    height: 40%;
+    padding: 30px 15px;
+    background: v.$secondaryBlackColor;
+    display: flex;
+    align-content: center;
+
+    .CardHome_article2 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .sec1 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: v.$mainWhite;
+        h2 {
+          font-size: 1rem;
+          font-weight: 700;
+        }
+        h3 {
+          font-size: 14px;
+          font-weight: 700;
+          background: none;
+        }
+      }
+      .sec2 {
+        background: v.$green;
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .CardHome {
+    width: 350px;
+    height: 518px;
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 100%;
+      height: 60%;
+      object-fit: cover;
+    }
+    .CardHome_article1 {
+      display: flex;
+      justify-content: end;
+      transform: translate(166px, 280px);
+      position: absolute;
+      .secText {
+        background: v.$green;
+        padding: 0 30px;
+        width: 184px;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        h3 {
+          font-size: 30px;
+          font-weight: 700;
+          color: v.$mainBlackColor;
+        }
+      }
+    }
+    .CardHome_figcap {
+      width: inherit;
+      height: 40%;
+      padding: 30px 20px;
+      background: v.$secondaryBlackColor;
+      display: flex;
+      align-content: center;
+
+      .CardHome_article2 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .sec1 {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          color: v.$mainWhite;
+          h2 {
+            font-size: 32px;
+            font-weight: 700;
+          }
+          h3 {
+            font-size: 24px;
+            font-weight: 700;
+            background: none;
+          }
+        }
+        .sec2 {
+          background: v.$green;
+          width: 88px;
+          height: 88px;
+          border-radius: 88px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 80px;
+            height: 80px;
+          }
+        }
+      }
+    }
+  }
+}

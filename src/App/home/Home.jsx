@@ -10,6 +10,8 @@ import Video from "../../components/video/Video";
 import ModalVideo from "../../components/modalVideo/ModalVideo";
 import CardPatrocinador from "../../components/cardPatrocinador/CardPatrocinador";
 import "./stylesHome.scss";
+import CardHome from "../../components/cards/cardHome/CardHome";
+import CarruselCardsHome from "../../components/cards/carruselCardsHome/CarruselCardsHome";
 
 const Home = () => {
   const { width, isOpen } = useContext(AppContext);
@@ -21,6 +23,9 @@ const Home = () => {
       <ModalVideo />
       <section>{width <= 600 ? <HeaderMobile /> : <></>}</section>;
       <LogoStreet />
+      <section className="CarruselHome">
+        <CarruselCardsHome />
+      </section>
       <Video />
       <Banners />
       <section className="secInfoMain">

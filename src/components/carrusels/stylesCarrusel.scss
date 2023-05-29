@@ -1,0 +1,49 @@
+@use "../../vars.scss" as v;
+
+.alice-carousel__dots {
+  transform: translateY(-10px);
+}
+.alice-carousel__dots-item:not(.__custom) {
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: v.$secondaryBlackColor !important;
+}
+
+.alice-carousel__dots-item:not(.__custom):hover,
+.alice-carousel__dots-item:not(.__custom).__active {
+  background-color: v.$green !important;
+}
+.alice-carousel__prev-btn {
+  width: 100%;
+  transform: translateY(-400px);
+
+  .alice-carousel__prev-btn-wrapper {
+    width: inherit;
+    display: flex;
+    justify-content: start;
+    padding-left: 10px;
+
+    .alice-carousel__prev-btn-item {
+      font-size: 50px;
+      color: v.$mainWhite;
+    }
+  }
+}
+
+.alice-carousel__next-btn {
+  width: 100%;
+  transform: translateY(-400px);
+
+  .alice-carousel__next-btn-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+    .alice-carousel__next-btn-item {
+      font-size: 50px;
+      color: v.$mainWhite;
+    }
+  }
+}

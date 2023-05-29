@@ -1,6 +1,9 @@
 .secInfoMain {
   display: flex;
   flex-direction: column;
+  .CarruselHome {
+    width: 100%;
+  }
 }
 @media (min-width: 768px) {
   .secInfoMain {
