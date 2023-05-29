@@ -4,14 +4,7 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { AppContext } from "../../router/Routers";
 
-const Carrusels = ({
-  items,
-  height = 400,
-  paddingLeft = "20px",
-  paddingRight = "20px",
-  margintop = 0,
-  marginbottom = 0,
-}) => {
+const Carrusels = ({ items, paddingLeft = "20px", paddingRight = "20px" }) => {
   const { width } = useContext(AppContext);
   const responsive = {
     0: {
@@ -36,7 +29,19 @@ const Carrusels = ({
       itemsFit: "fill",
     },
     1075: {
+      items: 3,
+      itemsFit: "fill",
+    },
+    1500: {
       items: 4,
+      itemsFit: "fill",
+    },
+    2000: {
+      items: 5,
+      itemsFit: "fill",
+    },
+    2800: {
+      items: 6,
       itemsFit: "fill",
     },
   };
@@ -46,12 +51,9 @@ const Carrusels = ({
       className="secCarrusel"
       style={{
         width: "100%",
-        height: height,
         display: "flex",
         alignItems: "center",
         paddingLeft: paddingLeft,
-        marginTop: margintop,
-        marginBottom: marginbottom,
         paddingRight: paddingRight,
       }}
     >

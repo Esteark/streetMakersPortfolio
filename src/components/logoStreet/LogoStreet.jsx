@@ -1,6 +1,7 @@
 import React from "react";
 import streetMakers from "../../assets/img/streetMakers.svg";
 import "./stylesLogoStreet.scss";
+import SeparadorLogo from "../separadorLogo/SeparadorLogo";
 
 const LogoStreet = () => {
   return (
@@ -8,7 +9,7 @@ const LogoStreet = () => {
       <figure>
         <img src={streetMakers} alt="" />
       </figure>
-      <div className="separador"></div>
+      <SeparadorLogo />
     </section>
   );
 };

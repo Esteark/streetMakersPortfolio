@@ -8,13 +8,11 @@ import SubMenu from "../../components/subMenu/SubMenu";
 import Footer from "../../components/footer/Footer";
 import Video from "../../components/video/Video";
 import ModalVideo from "../../components/modalVideo/ModalVideo";
-import CardPatrocinador from "../../components/cardPatrocinador/CardPatrocinador";
 import "./stylesHome.scss";
-import CardHome from "../../components/cards/cardHome/CardHome";
 import CarruselCardsHome from "../../components/cards/carruselCardsHome/CarruselCardsHome";
 
 const Home = () => {
-  const { width, isOpen } = useContext(AppContext);
+  const { width } = useContext(AppContext);
   useEffect(() => {
     console.log(width);
   }, [width]);
@@ -24,6 +22,7 @@ const Home = () => {
       <section>{width <= 600 ? <HeaderMobile /> : <></>}</section>;
       <LogoStreet />
       <section className="CarruselHome">
+        <h2>CRECE LA CULTURA HIP HOP </h2>
         <CarruselCardsHome />
       </section>
       <Video />

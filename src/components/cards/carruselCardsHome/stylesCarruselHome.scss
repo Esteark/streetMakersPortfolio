@@ -1,0 +1,14 @@
+@use "../../../vars.scss" as v;
+.secCarruselHome {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  article {
+    padding: 0 20px;
+    h2 {
+      font-size: 46px;
+      font-weight: 700;
+      color: v.$mainWhite;
+    }
+  }
+}

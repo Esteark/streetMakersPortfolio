@@ -4,7 +4,7 @@ import CardHome from "../cardHome/CardHome";
 import Carrusels from "../../carrusels/Carrusels";
 import { useContext } from "react";
 import { AppContext } from "../../../router/Routers";
-
+import "./stylesCarruselHome.scss";
 const CarruselCardsHome = () => {
   const { width } = useContext(AppContext);
   const renderCardsHome = () => {
@@ -21,13 +21,22 @@ const CarruselCardsHome = () => {
   };
 
   return (
-    <Carrusels
-      items={renderCardsHome()}
-      height={width <= 768 ? "400px" : "600px"}
-      margintop={width <= 768 ? "90px" : "120px"}
-      paddingLeft={"0px"}
-      paddingRight={"0px"}
-    />
+    <section
+      className="secCarruselHome"
+      style={{
+        height: `${width >= 768 ? "650px" : "500px"}`,
+        marginTop: `${width >= 768 ? "100px" : "50px"}`,
+      }}
+    >
+      <article>
+        <h2>CRECE LA CULTURA HIP HOP</h2>
+      </article>
+      <Carrusels
+        items={renderCardsHome()}
+        paddingLeft={width >= 2800 ? "5%" : "0px"}
+        paddingRight={width >= 2800 ? "5%" : "0px"}
+      />
+    </section>
   );
 };
 
