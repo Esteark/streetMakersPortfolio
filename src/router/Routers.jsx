@@ -4,7 +4,7 @@ import Home from "../App/home/Home";
 
 export const AppContext = createContext({});
 
-const Router = () => {
+const Routers = () => {
   const [width, setwidth] = useState(window.innerWidth);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -33,4 +33,4 @@ const Router = () => {
   );
 };
 
-export default Router;
+export default Routers;
