@@ -12,3 +12,15 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .secCarruselHome {
+    gap: 50px;
+    article {
+      h2 {
+        font-size: 70px;
+        text-align: center;
+      }
+    }
+  }
+}
