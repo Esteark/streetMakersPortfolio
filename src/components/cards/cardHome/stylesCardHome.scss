@@ -12,7 +12,7 @@
   .CardHome_article1 {
     display: flex;
     justify-content: end;
-    transform: translate(82px, 160px);
+    transform: translate(62px, 160px);
     position: absolute;
     .secText {
       background: v.$green;
@@ -31,7 +31,7 @@
   .CardHome_figcap {
     width: inherit;
     height: 40%;
-    padding: 30px 15px;
+    padding: 30px 5px;
     background: v.$secondaryBlackColor;
     display: flex;
     align-content: center;
@@ -41,6 +41,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 0 10px;
 
       .sec1 {
         display: flex;
@@ -59,8 +60,8 @@
       }
       .sec2 {
         background: v.$green;
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         border-radius: 30px;
         display: flex;
         justify-content: center;
@@ -88,7 +89,7 @@
     .CardHome_article1 {
       display: flex;
       justify-content: end;
-      transform: translate(166px, 280px);
+      transform: translate(146px, 280px);
       position: absolute;
       .secText {
         background: v.$green;

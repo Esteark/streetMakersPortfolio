@@ -10,9 +10,10 @@ const Carrusels = ({ items, paddingLeft = "20px", paddingRight = "20px" }) => {
     0: {
       items: 1,
     },
-    350: {
+    370: {
       items: 2,
     },
+
     568: {
       items: 2,
     },
