@@ -4,10 +4,12 @@ import { GrInstagram } from "react-icons/gr";
 import { SlArrowUp } from "react-icons/sl";
 import Swal from "sweetalert2";
 import { showNotify } from "../../services/Notify";
+import { useParams } from "react-router-dom";
 
 const Form = () => {
   const [text, setText] = useState("");
   const reg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const { id } = useParams();
   const showAlert = () => {
     if (text) {
       if (reg.test(text)) {
@@ -55,7 +57,7 @@ const Form = () => {
   };
 
   return (
-    <section className="secForm">
+    <section className="secForm" id={id}>
       <article className="secForm_header">
         <h3>ENTRADA LIBRE con boletería</h3>
         <GrInstagram className="icon" />

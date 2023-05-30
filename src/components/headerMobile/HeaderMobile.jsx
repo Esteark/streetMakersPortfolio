@@ -1,8 +1,6 @@
 import React from "react";
 import "./stylesHeaderMobile.scss";
 import mouth from "../../assets/img/mouth.png";
-import icon from "../../assets/img/icon.svg";
-import menu from "../../assets/img/menu.svg";
 import grafiti from "../../assets/img/grafitiHeader.png";
 import universe from "../../assets/img/universe.png";
 import { GrInstagram } from "react-icons/gr";
@@ -17,15 +15,11 @@ const HeaderMobile = () => {
         backgroundSize: "contain",
       }}
     >
-      <article className="item item-logo">
-        <img src={icon} alt="" />
-      </article>
+      <article className="item item-logo"></article>
       <article className="item item-date">
         <h3>2023</h3>
       </article>
-      <article className="item item-menu">
-        <img src={menu} alt="" />
-      </article>
+      <article className="item item-menu"></article>
       <article className="item"></article>
       <article className="item item-mouth">
         <img src={mouth} alt="" />

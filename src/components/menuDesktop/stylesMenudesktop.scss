@@ -1,0 +1,32 @@
+@use "../../vars.scss" as v;
+.nav__desk {
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 80px);
+  width: 100%;
+  z-index: 9;
+  transition: 0.5s;
+
+  .d-flex {
+    display: flex;
+    justify-content: center;
+    color: v.$mainWhite;
+    align-items: center;
+    font-size: 1rem;
+    h3 {
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        color: v.$green;
+        transition: 0.5s;
+      }
+    }
+  }
+  .sec3 {
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

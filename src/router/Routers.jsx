@@ -12,6 +12,15 @@ const Routers = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleScroll = () => {
+    const menu = document.getElementById("menuScroll");
+    if (window.scrollY > menu.offsetHeight) {
+      menu.classList.add("backgroundScroll");
+    } else {
+      menu.classList.remove("backgroundScroll");
+    }
+  };
+
   useEffect(() => {
     const resizeScreen = () => {
       setwidth(window.innerWidth);
@@ -23,7 +32,7 @@ const Routers = () => {
   });
 
   return (
-    <AppContext.Provider value={{ width, isOpen, handleModal }}>
+    <AppContext.Provider value={{ width, isOpen, handleModal, handleScroll }}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />

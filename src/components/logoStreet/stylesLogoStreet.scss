@@ -19,6 +19,20 @@
 
 @media (min-width: 768px) {
   .secLogo {
+    transform: translateY(-320px);
+    figure {
+      width: 360px;
+      height: 360px;
+      border-radius: 100%;
+      img {
+        width: 50%;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .secLogo {
+    transform: translateY(-310px);
     figure {
       width: 460px;
       height: 460px;

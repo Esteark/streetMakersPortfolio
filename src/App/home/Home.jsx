@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import HeaderMobile from "../../components/headerMobile/HeaderMobile";
 import { AppContext } from "../../router/Routers";
 import LogoStreet from "../../components/logoStreet/LogoStreet";
@@ -10,16 +10,20 @@ import Video from "../../components/video/Video";
 import ModalVideo from "../../components/modalVideo/ModalVideo";
 import "./stylesHome.scss";
 import CarruselCardsHome from "../../components/cards/carruselCardsHome/CarruselCardsHome";
+import MenuDesktop from "../../components/menuDesktop/MenuDesktop";
+import HeaderDesktop from "../../components/headerDesktop/HeaderDesktop";
 
 const Home = () => {
   const { width } = useContext(AppContext);
+
   useEffect(() => {
     console.log(width);
   }, [width]);
   return (
     <main>
       <ModalVideo />
-      <section>{width <= 600 ? <HeaderMobile /> : <></>}</section>;
+      {width >= 768 ? <MenuDesktop /> : <></>}
+      {width < 768 ? <HeaderMobile /> : <HeaderDesktop />};
       <LogoStreet />
       <section className="CarruselHome">
         <h2>CRECE LA CULTURA HIP HOP </h2>
