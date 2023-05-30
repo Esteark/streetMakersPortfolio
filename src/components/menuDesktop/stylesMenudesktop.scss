@@ -29,4 +29,18 @@
       height: 30px;
     }
   }
+
+  .sec5 {
+    a {
+      cursor: pointer;
+      transition: 0.5s;
+      color: v.$mainWhite;
+      font-size: 18px;
+      font-weight: 700;
+      &:hover {
+        color: v.$green;
+        transition: 0.5s;
+      }
+    }
+  }
 }

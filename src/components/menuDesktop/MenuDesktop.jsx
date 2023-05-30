@@ -27,7 +27,12 @@ const MenuDesktop = () => {
         <h3>INSCRIPCIÓN</h3>
       </section>
       <section className="sec5 d-flex">
-        <h3>MÁS INFO</h3>
+        <a
+          href="https://www.instagram.com/streetmakersmedellin/"
+          target="_blank"
+        >
+          MÁS INFO
+        </a>
       </section>
     </nav>
   );
