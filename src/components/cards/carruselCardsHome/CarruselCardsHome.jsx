@@ -25,7 +25,7 @@ const CarruselCardsHome = () => {
       className="secCarruselHome"
       style={{
         height: `${width >= 1500 ? "850px" : width >= 768 ? "750px" : "500px"}`,
-        marginTop: `${width >= 768 ? "200px" : "50px"}`,
+        marginTop: `${width >= 830 ? "200px" : "50px"}`,
       }}
     >
       <article>
