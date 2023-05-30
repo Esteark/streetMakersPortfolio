@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../App/home/Home";
+import Galeria from "../App/galeria/Galeria";
 
 export const AppContext = createContext({});
 
@@ -10,6 +11,10 @@ const Routers = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleModal = () => {
     setIsOpen(!isOpen);
+  };
+  const [openMenu, setOpenMenu] = useState(false);
+  const handleMenu = () => {
+    setOpenMenu(!openMenu);
   };
 
   const handleScroll = () => {
@@ -32,10 +37,20 @@ const Routers = () => {
   });
 
   return (
-    <AppContext.Provider value={{ width, isOpen, handleModal, handleScroll }}>
+    <AppContext.Provider
+      value={{
+        width,
+        isOpen,
+        handleModal,
+        handleScroll,
+        openMenu,
+        setOpenMenu,
+      }}
+    >
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/galeria" element={<Galeria />} />
         </Routes>
       </BrowserRouter>
     </AppContext.Provider>

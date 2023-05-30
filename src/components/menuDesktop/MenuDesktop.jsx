@@ -11,6 +11,7 @@ const MenuDesktop = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  const navigate = useNavigate();
 
   return (
     <nav className="nav__desk" id="menuScroll">
@@ -18,10 +19,23 @@ const MenuDesktop = () => {
         <h3>EVENTO</h3>
       </section>
       <section className="sec2 d-flex">
-        <h3>GALERÍA</h3>
+        <h3
+          onClick={() => {
+            navigate("/galeria");
+          }}
+        >
+          GALERÍA
+        </h3>
       </section>
       <section className="sec3 d-flex">
-        <img src={icon} alt="" />
+        <img
+          src={icon}
+          alt=""
+          onClick={() => {
+            navigate("/");
+          }}
+          style={{ cursor: "pointer" }}
+        />
       </section>
       <section className="sec4 d-flex">
         <h3>INSCRIPCIÓN</h3>

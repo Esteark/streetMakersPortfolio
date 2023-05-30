@@ -11,6 +11,7 @@ import ModalVideo from "../../components/modalVideo/ModalVideo";
 import "./stylesHome.scss";
 import CarruselCardsHome from "../../components/cards/carruselCardsHome/CarruselCardsHome";
 import MenuDesktop from "../../components/menuDesktop/MenuDesktop";
+import MenuMobile from "../../components/menuMobile/MenuMobile";
 import HeaderDesktop from "../../components/headerDesktop/HeaderDesktop";
 
 const Home = () => {
@@ -22,7 +23,7 @@ const Home = () => {
   return (
     <main>
       <ModalVideo />
-      {width >= 768 ? <MenuDesktop /> : <></>}
+      {width >= 768 ? <MenuDesktop /> : <MenuMobile />}
       {width < 768 ? <HeaderMobile /> : <HeaderDesktop />};
       <LogoStreet />
       <section className="CarruselHome">

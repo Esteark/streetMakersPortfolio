@@ -3,10 +3,16 @@ import { BsFillStarFill } from "react-icons/bs";
 import "./stylesSubMenu.scss";
 
 const SubMenu = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <section className="subMenu">
       <article className="subMenu_info">
-        <h3>INICIO</h3>
+        <a onClick={scrollToTop}>INICIO</a>
         <div>
           {[...Array(5)].map((_, index) => (
             <BsFillStarFill className="icon" key={index} />
@@ -14,7 +20,7 @@ const SubMenu = () => {
         </div>
       </article>
       <article className="subMenu_info">
-        <h3>GALERÍA</h3>
+        <a>GALERÍA</a>
         <div>
           {[...Array(5)].map((_, index) => (
             <BsFillStarFill className="icon" key={index} />
@@ -22,7 +28,7 @@ const SubMenu = () => {
         </div>
       </article>
       <article className="subMenu_info">
-        <h3>EVENTO</h3>
+        <a>EVENTO</a>
         <div>
           {[...Array(5)].map((_, index) => (
             <BsFillStarFill className="icon" key={index} />
@@ -30,7 +36,7 @@ const SubMenu = () => {
         </div>
       </article>
       <article className="subMenu_info">
-        <h3>PROCESO</h3>
+        <a>PROCESO</a>
         <div>
           {[...Array(5)].map((_, index) => (
             <BsFillStarFill className="icon" key={index} />
@@ -38,7 +44,7 @@ const SubMenu = () => {
         </div>
       </article>
       <article className="subMenu_info">
-        <h3>BEHANCE</h3>
+        <a>BEHANCE</a>
         <div>
           {[...Array(5)].map((_, index) => (
             <BsFillStarFill className="icon" key={index} />

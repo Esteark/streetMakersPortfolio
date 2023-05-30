@@ -14,11 +14,12 @@
     justify-content: space-between;
     align-items: center;
     transition: 0.1s;
-    h3 {
+    a {
       font-size: 20px;
       font-weight: 700;
       transition: 0.2s;
       cursor: pointer;
+      color: v.$mainWhite;
       &:hover {
         color: v.$green;
         transition: 0.2s;

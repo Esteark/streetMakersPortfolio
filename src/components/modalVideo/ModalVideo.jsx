@@ -41,7 +41,7 @@ const ModalVideo = () => {
         </div>
         <div className="sec2">
           <iframe
-            src="https://www.youtube.com/embed/xwTVjCQOvDg"
+            src="https://www.youtube.com/embed/3jdu4q-v8yg"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           ></iframe>
