@@ -2,8 +2,7 @@ import React from "react";
 import "./stylesHeaderGal.scss";
 import imgHeader1 from ".././../assets/img/galeria/header1.jpg";
 import imgHeader2 from ".././../assets/img/galeria/header2.jpg";
-
-const HeaderGaleria = () => {
+const HeaderGalery = () => {
   return (
     <section className="headerGal">
       <article className="headerGal-sec1"></article>
@@ -28,4 +27,4 @@ const HeaderGaleria = () => {
   );
 };
 
-export default HeaderGaleria;
+export default HeaderGalery;
