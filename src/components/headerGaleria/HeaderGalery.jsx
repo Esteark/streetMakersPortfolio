@@ -2,6 +2,7 @@ import React from "react";
 import "./stylesHeaderGal.scss";
 import imgHeader1 from ".././../assets/img/galeria/header1.jpg";
 import imgHeader2 from ".././../assets/img/galeria/header2.jpg";
+
 const HeaderGalery = () => {
   return (
     <section className="headerGal">

@@ -1,0 +1,17 @@
+.menuMobile {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  transition: 0.5s;
+  figure {
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

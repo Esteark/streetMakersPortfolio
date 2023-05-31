@@ -1,0 +1,44 @@
+@use "../../../vars.scss" as v;
+.secMenuMobileClick {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  height: 100vh;
+  background: v.$secondaryBlackColor;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 30px;
+
+  .sec1 {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    font-size: 50px;
+    color: v.$mainWhite;
+  }
+  .sec2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    text-align: right;
+    a {
+      color: v.$mainWhite;
+      font-weight: 700;
+      font-size: 30px;
+      transition: 0.5s;
+      &:hover {
+        color: v.$green;
+        transition: 0.5s;
+      }
+    }
+  }
+
+  .item {
+    &-active {
+      color: v.$green;
+    }
+  }
+}

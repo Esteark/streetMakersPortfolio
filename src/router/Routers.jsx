@@ -44,7 +44,7 @@ const Routers = () => {
         handleModal,
         handleScroll,
         openMenu,
-        setOpenMenu,
+        handleMenu,
       }}
     >
       <BrowserRouter>
