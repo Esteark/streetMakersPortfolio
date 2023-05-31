@@ -1,7 +1,7 @@
 @use "../../vars.scss" as v;
 
 .alice-carousel__dots {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 .alice-carousel__dots-item:not(.__custom) {
   width: 8px;

@@ -28,6 +28,14 @@ import product12 from "../assets/img/cardsGaleria/12.jpg";
 import product13 from "../assets/img/cardsGaleria/13.jpg";
 import product14 from "../assets/img/cardsGaleria/14.jpg";
 import product15 from "../assets/img/cardsGaleria/15.jpg";
+import imgEve1 from "../assets/img/cardsEventos/mob/1.png";
+import imgEve2 from "../assets/img/cardsEventos/mob/2.png";
+import imgEve3 from "../assets/img/cardsEventos/mob/3.png";
+import imgEve4 from "../assets/img/cardsEventos/mob/4.png";
+import imgEve5 from "../assets/img/cardsEventos/mob/5.png";
+import imgEve6 from "../assets/img/cardsEventos/mob/6.png";
+import imgEve7 from "../assets/img/cardsEventos/mob/7.png";
+import imgEve8 from "../assets/img/cardsEventos/mob/8.png";
 
 //Objeto con toda la información para las cards del home
 export const CardsHome = [
@@ -204,5 +212,70 @@ export const CardsGaleriaDesk = [
   {
     id: 15,
     img: product15,
+  },
+];
+
+export const CardsEventos = [
+  {
+    id: 1,
+    text1: "",
+    text2: "",
+    icon: "",
+    img: imgEve1,
+  },
+  {
+    id: 2,
+    text1: "LOS RAPPERS (MCS):",
+    text2:
+      "Los rappers improvisan rimas y retórica sobre música en el hip hop, liderados por pioneros como Grandmaster Flash y KRS-One.",
+    icon: iconHome2,
+    img: imgEve2,
+  },
+  {
+    id: 3,
+    text1: "GRAFFITI:",
+    text2:
+      "El graffiti, nacido en el hip hop, es arte visual con aerosoles en paredes y edificios, liderado por The Fab Five en Nueva York.",
+    icon: iconHome3,
+    img: imgEve3,
+  },
+  {
+    id: 4,
+    text1: "BREAKDANCE:",
+    text2:
+      "Baile hip hop de los 80 con acrobacias, liderado por Afrika Bambaataa y Rock Steady Crew.",
+    icon: iconHome1,
+    img: imgEve4,
+  },
+  {
+    id: 5,
+    text1: "EL DJ O DISC-JOCKEY:",
+    text2:
+      "Crea música mezclando discos y desarrollando técnicas como scratching y looping.",
+    icon: iconHome4,
+    img: imgEve5,
+  },
+  {
+    id: 6,
+    text1: "BEATMAKING:",
+    text2:
+      "En los 80 surge un movimiento musical contracultural de DJs y beatmakers que generan música usando sampleo y tecnología.",
+    icon: iconHome5,
+    img: imgEve6,
+  },
+  {
+    id: 7,
+    text1: "EN 2006",
+    text2:
+      "Se crea el primer festival Altavoz con música RAP dentro del festival realizado en la ciudad de Medellín.",
+    icon: iconHome6,
+    img: imgEve7,
+  },
+  {
+    id: 8,
+    text1: "CASAS DE HIP HOP EN MEDELLÍN",
+    text2: "Casa Kolacho / La casa del Hip Hop / 4Eskuela / Urban Flow.",
+    icon: iconHome6,
+    img: imgEve8,
   },
 ];

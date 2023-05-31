@@ -1,0 +1,27 @@
+@use "../../vars.scss" as v;
+.secEventos {
+  .secMainEventos {
+    width: inherit;
+    height: inherit;
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+      color: v.$mainWhite;
+      padding: 30px;
+    }
+    &-Mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      figure {
+        width: 100%;
+        height: 460px;
+        img {
+          width: inherit;
+          height: inherit;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

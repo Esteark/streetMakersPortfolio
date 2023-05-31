@@ -7,17 +7,18 @@ import OptionsMenu from "../../components/menuMobile/options/OptionsMenu";
 import HeaderMobile from "../../components/headerMobile/HeaderMobile";
 import HeaderDesktop from "../../components/headerDesktop/HeaderDesktop";
 import Banners from "../../components/banners/Banners";
-
 import SubMenu from "../../components/subMenu/SubMenu";
 import Footer from "../../components/footer/Footer";
 import Form from "../../components/form/Form";
 import LogoStreet from "../../components/logoStreet/LogoStreet";
 import SecInfoEventos from "../../components/secInfoEventos/SecInfoEventos";
+import imgEventos from "../../assets/img/imgEventos.png";
+import CarruselEventos from "../../components/cards/carruselEventos/CarruselEventos";
 
 const Eventos = () => {
   const { width } = useContext(AppContext);
   return (
-    <section>
+    <section className="secEventos">
       {width >= 768 ? (
         <MenuDesktop />
       ) : (
@@ -29,6 +30,19 @@ const Eventos = () => {
       {width < 768 ? <HeaderMobile op={1} /> : <HeaderDesktop op={1} />};
       <LogoStreet op={1} />
       <SecInfoEventos />
+      <section className="secMainEventos">
+        <h2>ALGO DE HISTORIA</h2>
+        {width <= 768 ? (
+          <section className="secMainEventos-Mobile">
+            <CarruselEventos />
+            <figure>
+              <img src={imgEventos} alt="" />
+            </figure>
+          </section>
+        ) : (
+          <section className="secMainEventos-Desktop"></section>
+        )}
+      </section>
       <section>
         <Banners />
       </section>
