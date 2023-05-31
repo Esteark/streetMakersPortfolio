@@ -1,8 +1,10 @@
 import React from "react";
 import { BsFillStarFill } from "react-icons/bs";
 import "./stylesSubMenu.scss";
+import { useNavigate } from "react-router-dom";
 
 const SubMenu = () => {
+  const navigate = useNavigate();
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -20,7 +22,13 @@ const SubMenu = () => {
         </div>
       </article>
       <article className="subMenu_info">
-        <a>GALERÍA</a>
+        <a
+          onClick={() => {
+            navigate("/galeria");
+          }}
+        >
+          GALERÍA
+        </a>
         <div>
           {[...Array(5)].map((_, index) => (
             <BsFillStarFill className="icon" key={index} />
@@ -28,7 +36,13 @@ const SubMenu = () => {
         </div>
       </article>
       <article className="subMenu_info">
-        <a>EVENTO</a>
+        <a
+          onClick={() => {
+            navigate("/eventos");
+          }}
+        >
+          EVENTOS
+        </a>
         <div>
           {[...Array(5)].map((_, index) => (
             <BsFillStarFill className="icon" key={index} />
