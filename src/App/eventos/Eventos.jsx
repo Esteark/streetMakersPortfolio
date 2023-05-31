@@ -31,7 +31,9 @@ const Eventos = () => {
       <LogoStreet op={1} />
       <SecInfoEventos />
       <section className="secMainEventos">
-        <h2>ALGO DE HISTORIA</h2>
+        <h2 style={{ display: `${width > 768 ? "none" : "block"}` }}>
+          ALGO DE HISTORIA
+        </h2>
         {width <= 768 ? (
           <section className="secMainEventos-Mobile">
             <CarruselEventos />
