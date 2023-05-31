@@ -14,6 +14,7 @@ import MenuDesktop from "../../components/menuDesktop/MenuDesktop";
 import HeaderDesktop from "../../components/headerDesktop/HeaderDesktop";
 import MenuMobile from "../../components/menuMobile/MenuMobile";
 import CardPatrocinador from "../../components/cardPatrocinador/CardPatrocinador";
+import OptionsMenu from "../../components/menuMobile/options/OptionsMenu";
 
 const Home = () => {
   const { width } = useContext(AppContext);
@@ -24,7 +25,14 @@ const Home = () => {
   return (
     <main>
       <ModalVideo />
-      {width >= 768 ? <MenuDesktop /> : <MenuMobile />}
+      {width >= 768 ? (
+        <MenuDesktop />
+      ) : (
+        <>
+          <MenuMobile />
+          <OptionsMenu />
+        </>
+      )}
       {width < 768 ? <HeaderMobile /> : <HeaderDesktop />};
       <LogoStreet />
       <section className="CarruselHome">
