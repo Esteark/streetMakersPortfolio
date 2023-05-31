@@ -105,6 +105,7 @@
       .img7,
       article {
         height: calc(50% - 5px);
+        object-fit: cover;
       }
       article {
         display: flex;
