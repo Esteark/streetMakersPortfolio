@@ -6,6 +6,9 @@ import { GrInstagram } from "react-icons/gr";
 import "./stylesHedaerDesktop.scss";
 
 const HeaderDesktop = ({ op = 0 }) => {
+  const instagramStreet = () => {
+    window.open("https://www.instagram.com/streetmakersmedellin/", "_blank");
+  };
   return (
     <section
       className="headerDesktop"
@@ -43,7 +46,7 @@ const HeaderDesktop = ({ op = 0 }) => {
               <></>
             )}
             <article className="icon">
-              <GrInstagram />
+              <GrInstagram onClick={instagramStreet} />
             </article>
           </div>
         </div>

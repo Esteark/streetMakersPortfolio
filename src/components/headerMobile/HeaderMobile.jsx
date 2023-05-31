@@ -4,8 +4,12 @@ import mouth from "../../assets/img/mouth.png";
 import grafiti from "../../assets/img/grafitiHeader.png";
 import universe from "../../assets/img/universe.png";
 import { GrInstagram } from "react-icons/gr";
+import { useNavigate } from "react-router-dom";
 
 const HeaderMobile = () => {
+  const instagramStreet = () => {
+    window.open("https://www.instagram.com/streetmakersmedellin/", "_blank");
+  };
   return (
     <section
       className="headerMobile"
@@ -40,7 +44,7 @@ const HeaderMobile = () => {
           <section>
             <h4>Medellín </h4>
             <span>
-              <GrInstagram />
+              <GrInstagram onClick={instagramStreet} />
             </span>
           </section>
 
