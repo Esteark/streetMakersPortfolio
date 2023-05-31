@@ -15,6 +15,7 @@ const CarruselCardsHome = () => {
         icon={card.icon}
         text1={card.text1}
         text2={card.text2}
+        path={card.path}
         key={card.id}
       />
     ));

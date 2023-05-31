@@ -23,6 +23,7 @@ export const CardsHome = [
     icon: iconHome1,
     text1: "Ganbeta en:",
     text2: "BREAKING",
+    path: "/eventos",
   },
   {
     id: 2,
@@ -31,6 +32,7 @@ export const CardsHome = [
     icon: iconHome2,
     text1: "Bboy Julio en:",
     text2: "MC / RAP",
+    path: "/eventos",
   },
   {
     id: 3,
@@ -39,6 +41,7 @@ export const CardsHome = [
     icon: iconHome3,
     text1: "Junior Ruiz en:",
     text2: "GRAFFITI",
+    path: "/eventos",
   },
   {
     id: 4,
@@ -47,6 +50,7 @@ export const CardsHome = [
     icon: iconHome4,
     text1: "Dmoe en:",
     text2: "DJ",
+    path: "/eventos",
   },
   {
     id: 5,
@@ -55,6 +59,7 @@ export const CardsHome = [
     icon: iconHome5,
     text1: "Sem en:",
     text2: "Beat Maker",
+    path: "/eventos",
   },
   {
     id: 6,
@@ -63,6 +68,7 @@ export const CardsHome = [
     icon: iconHome6,
     text1: "Más contenido en:",
     text2: "MAKING ART",
+    path: "/galeria",
   },
   {
     id: 6,
@@ -71,6 +77,7 @@ export const CardsHome = [
     icon: iconHome6,
     text1: "Más contenido en:",
     text2: "MAKING ART",
+    path: "/galeria",
   },
   {
     id: 6,
@@ -79,5 +86,6 @@ export const CardsHome = [
     icon: iconHome6,
     text1: "Más contenido en:",
     text2: "MAKING ART",
+    path: "/galeria",
   },
 ];

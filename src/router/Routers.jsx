@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../App/home/Home";
 import Galeria from "../App/galeria/Galeria";
+import Eventos from "../App/eventos/Eventos";
 
 export const AppContext = createContext({});
 
@@ -51,6 +52,7 @@ const Routers = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/galeria" element={<Galeria />} />
+          <Route path="/eventos" element={<Eventos />} />
         </Routes>
       </BrowserRouter>
     </AppContext.Provider>

@@ -1,9 +1,17 @@
 import React from "react";
 import "./stylesCardHome.scss";
+import { useNavigate } from "react-router-dom";
 
-const CardHome = ({ img, tipo, icon, text1, text2 }) => {
+const CardHome = ({ img, tipo, icon, text1, text2, path }) => {
+  const navigate = useNavigate();
+
   return (
-    <figure className="CardHome">
+    <figure
+      className="CardHome"
+      onClick={() => {
+        navigate(path);
+      }}
+    >
       <img src={img} alt="" />
       <article className="CardHome_article1">
         <div className="secText">
