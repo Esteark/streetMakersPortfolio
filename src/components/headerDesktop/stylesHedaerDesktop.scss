@@ -72,6 +72,16 @@
             color: v.$mainBlackColor;
             cursor: pointer;
           }
+          .iconEve {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: v.$green;
+            padding: 10px;
+            border-radius: 60px;
+            color: v.$mainBlackColor;
+            cursor: pointer;
+          }
         }
       }
       .sec2 {
@@ -135,6 +145,22 @@
           h2 {
             font-size: 100px;
           }
+          &-icons {
+            gap: 5px;
+            .iconEve {
+              font-size: 25px;
+              background: v.$green;
+              padding: 5px;
+              border-radius: 50px;
+              color: v.$mainBlackColor;
+              cursor: pointer;
+              img {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+              }
+            }
+          }
         }
         .sec2 {
           transform: translate(-90px, 180px);
@@ -168,6 +194,21 @@
           h2 {
             font-size: 100px;
           }
+          &-icons {
+            gap: 5px;
+            .iconEve {
+              background: v.$green;
+              border-radius: 50px;
+              color: v.$mainBlackColor;
+              padding: 5px;
+              cursor: pointer;
+              img {
+                width: 45px;
+                height: 45px;
+                object-fit: cover;
+              }
+            }
+          }
         }
         .sec2 {
           transform: translate(-90px, 180px);
@@ -176,6 +217,31 @@
           }
           &-subtexts {
             display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 804px) {
+  .headerDesktop {
+    .item {
+      &-Texts {
+        .sec1 {
+          h2 {
+            font-size: 80px;
+          }
+          &-icons {
+            .iconEve {
+              font-size: 1rem;
+              padding: 12px;
+            }
+          }
+        }
+        .sec2 {
+          h2 {
+            font-size: 80px;
           }
         }
       }

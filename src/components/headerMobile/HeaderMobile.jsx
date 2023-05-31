@@ -1,12 +1,15 @@
 import React from "react";
 import "./stylesHeaderMobile.scss";
 import mouth from "../../assets/img/mouth.png";
+import eye from "../../assets/img/eye.png";
 import grafiti from "../../assets/img/grafitiHeader.png";
 import universe from "../../assets/img/universe.png";
+import build from "../../assets/img/build.svg";
+import metro from "../../assets/img/metro.svg";
+import insta from "../../assets/img/insta.svg";
 import { GrInstagram } from "react-icons/gr";
-import { useNavigate } from "react-router-dom";
 
-const HeaderMobile = () => {
+const HeaderMobile = ({ op = 0 }) => {
   const instagramStreet = () => {
     window.open("https://www.instagram.com/streetmakersmedellin/", "_blank");
   };
@@ -26,21 +29,26 @@ const HeaderMobile = () => {
       <article className="item item-menu"></article>
       <article className="item"></article>
       <article className="item item-mouth">
-        <img src={mouth} alt="" />
+        <img src={op == 0 ? mouth : eye} alt="" />
       </article>
       <article className="item item-universe">
         <img src={universe} alt="" />
       </article>
       <article className="item"></article>
       <article className="item item-headerText1">
-        <h2>
-          Trágate <br /> el género
+        <h2
+          style={{
+            fontSize: `${op != 0 ? "50px" : ""}`,
+            letterSpacing: `${op != 0 ? "5px" : ""}`,
+          }}
+        >
+          Trágate <br /> {op == 0 ? "el género" : "el contexto"}
         </h2>
       </article>
       <article className="item "></article>
       <article className="item "></article>
       <article className="item item-headerText2">
-        <div>
+        <div style={{ display: `${op != 0 ? "none" : ""}` }}>
           <section>
             <h4>Medellín </h4>
             <span>
@@ -48,7 +56,21 @@ const HeaderMobile = () => {
             </span>
           </section>
 
-          <p>JUN23-JUN24</p>
+          <p>JUN24-JUN25</p>
+        </div>
+        <div
+          style={{ display: `${op == 0 ? "none" : ""}` }}
+          className="iconsEvento"
+        >
+          <span>
+            <img src={build} alt="" />
+          </span>
+          <span>
+            <img src={metro} alt="" />
+          </span>
+          <span>
+            <img src={insta} alt="" onClick={instagramStreet} />
+          </span>
         </div>
       </article>
       <article className="item "></article>

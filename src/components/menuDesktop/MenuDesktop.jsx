@@ -16,7 +16,13 @@ const MenuDesktop = () => {
   return (
     <nav className="nav__desk" id="menuScroll">
       <section className="sec1 d-flex">
-        <h3>EVENTO</h3>
+        <h3
+          onClick={() => {
+            navigate("/eventos");
+          }}
+        >
+          EVENTO
+        </h3>
       </section>
       <section className="sec2 d-flex">
         <h3

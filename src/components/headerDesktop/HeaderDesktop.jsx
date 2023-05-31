@@ -1,8 +1,12 @@
 import React from "react";
 import mouth from "../../assets/img/mouth.png";
+import eye from "../../assets/img/eye.png";
 import grafiti from "../../assets/img/grafitiHeader.png";
 import universe from "../../assets/img/universe.png";
-import { GrInstagram } from "react-icons/gr";
+import build from "../../assets/img/build.svg";
+import metro from "../../assets/img/metro.svg";
+import insta from "../../assets/img/insta.svg";
+
 import "./stylesHedaerDesktop.scss";
 
 const HeaderDesktop = ({ op = 0 }) => {
@@ -35,24 +39,29 @@ const HeaderDesktop = ({ op = 0 }) => {
           <div className="sec1-icons">
             {op !== 0 ? (
               <>
-                <article className="iconsvg">
-                  <GrInstagram />
+                <article className="iconEve ">
+                  <img src={metro} alt="" />
                 </article>
-                <article className="iconsvg">
-                  <GrInstagram />
+                <article className="iconEve ">
+                  <img src={build} alt="" />
                 </article>
               </>
             ) : (
               <></>
             )}
-            <article className="icon">
-              <GrInstagram onClick={instagramStreet} />
+            <article className={`${op != 0 ? "iconEve" : "icon"}`}>
+              <img src={insta} alt="" onClick={instagramStreet} />
             </article>
           </div>
         </div>
         <div className="sec2">
-          <h2>{op == 0 ? "EL GÉNERO" : "EL CONTEXTO"}</h2>
-          <div className="sec2-subtexts">
+          <h2 style={{ transform: `${op != 0 ? "translate" : ""}` }}>
+            {op == 0 ? "EL GÉNERO" : "EL CONTEXTO"}
+          </h2>
+          <div
+            className="sec2-subtexts"
+            style={{ display: `${op != 0 ? "none" : ""}` }}
+          >
             <h3>MEDELLÍN</h3>
             <div>
               <p>JUN 24</p>
@@ -68,7 +77,7 @@ const HeaderDesktop = ({ op = 0 }) => {
       {/* Tercera fila  */}
       <article className=""></article>
       <article className="item item-mouth">
-        <img src={mouth} alt="" />
+        <img src={op != 0 ? eye : mouth} alt="" />
       </article>
       <article className="item"></article>
       <article className="item"></article>

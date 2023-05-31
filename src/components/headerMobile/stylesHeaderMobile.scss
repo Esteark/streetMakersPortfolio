@@ -111,6 +111,26 @@
           letter-spacing: 2px;
         }
       }
+      .iconsEvento {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        span {
+          background-color: v.$green;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 10px;
+          border-radius: 60px;
+          color: v.$secondaryBlackColor;
+          img {
+            width: 37px;
+            height: 37px;
+            object-fit: cover;
+          }
+        }
+      }
     }
   }
 }

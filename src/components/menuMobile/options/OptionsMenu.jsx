@@ -26,7 +26,14 @@ const OptionsMenu = () => {
         />
       </article>
       <article className="sec2">
-        <h3>Evento</h3>
+        <h3
+          onClick={() => {
+            navigate("/eventos");
+            handleMenu();
+          }}
+        >
+          Eventos
+        </h3>
         <h3
           onClick={() => {
             navigate("/galeria");
