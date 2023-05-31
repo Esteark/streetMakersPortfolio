@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import "./stylesOptions.scss";
 import { IoCloseCircle } from "react-icons/io5";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AppContext } from "../../../router/Routers";
 
 const OptionsMenu = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { openMenu, handleMenu } = useContext(AppContext);
 
   return (
@@ -25,10 +26,17 @@ const OptionsMenu = () => {
         />
       </article>
       <article className="sec2">
-        <a href="">Evento</a>
-        <a href="">Galeria</a>
-        <a href="">Inscripción</a>
-        <a href="">Más Info</a>
+        <h3>Evento</h3>
+        <h3
+          onClick={() => {
+            navigate("/galeria");
+            handleMenu();
+          }}
+        >
+          Galeria
+        </h3>
+        <h3>Inscripción</h3>
+        <h3>Más Info</h3>
       </article>
     </motion.section>
   );
