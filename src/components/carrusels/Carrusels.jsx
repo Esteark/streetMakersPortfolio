@@ -56,38 +56,38 @@ const Carrusels = ({
       items: 1,
     },
     370: {
-      items: 2,
+      items: 1,
     },
 
     568: {
       items: 2,
     },
     668: {
-      items: 3,
-      itemsFit: "fill",
-    },
-    768: {
-      items: 2,
-    },
-
-    1024: {
-      items: 2,
-      itemsFit: "fill",
-    },
-    1075: {
-      items: 3,
-      itemsFit: "fill",
-    },
-    1500: {
       items: 4,
       itemsFit: "fill",
     },
-    2000: {
+    768: {
       items: 5,
+    },
+
+    1024: {
+      items: 4,
+      itemsFit: "fill",
+    },
+    1075: {
+      items: 6,
+      itemsFit: "fill",
+    },
+    1500: {
+      items: 8,
+      itemsFit: "fill",
+    },
+    2000: {
+      items: 7,
       itemsFit: "fill",
     },
     2800: {
-      items: 6,
+      items: 8,
       itemsFit: "fill",
     },
   };
@@ -95,40 +95,43 @@ const Carrusels = ({
   const responsiveGal = {
     0: {
       items: 1,
+      itemsFit: "fill",
     },
     370: {
       items: 2,
+      itemsFit: "fill",
     },
 
     568: {
-      items: 2,
+      items: 3,
+      itemsFit: "fill",
     },
     668: {
       items: 3,
       itemsFit: "fill",
     },
     768: {
-      items: 2,
+      items: 4,
     },
 
     1024: {
-      items: 2,
-      itemsFit: "fill",
-    },
-    1075: {
-      items: 3,
-      itemsFit: "fill",
-    },
-    1500: {
-      items: 4,
-      itemsFit: "fill",
-    },
-    2000: {
       items: 5,
       itemsFit: "fill",
     },
-    2800: {
+    1075: {
       items: 6,
+      itemsFit: "fill",
+    },
+    1500: {
+      items: 8,
+      itemsFit: "fill",
+    },
+    2000: {
+      items: 8,
+      itemsFit: "fill",
+    },
+    2800: {
+      items: 8,
       itemsFit: "fill",
     },
   };
@@ -152,7 +155,9 @@ const Carrusels = ({
         }
         keyboardNavigation={false}
         infinite={true}
-        disableButtonsControls={width >= 768 ? false : true}
+        disableButtonsControls={
+          width >= 768 && op == 0 ? false : op != 0 ? true : false
+        }
       />
     </section>
   );

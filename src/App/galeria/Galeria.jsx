@@ -10,6 +10,7 @@ import OptionsMenu from "../../components/menuMobile/options/OptionsMenu";
 import MainGalery from "../../components/mainGalery/MainGalery";
 import SubMenu from "../../components/subMenu/SubMenu";
 import Banners from "../../components/banners/Banners";
+import CarruselCardsGalery from "../../components/cards/carruselCardsGalery/CarruselCardsGalery";
 
 const Galeria = () => {
   const { width } = useContext(AppContext);
@@ -25,6 +26,8 @@ const Galeria = () => {
       )}
       <HeaderGalery />
       <MainGalery />
+      <CarruselCardsGalery />
+
       <section>
         <Banners />
       </section>

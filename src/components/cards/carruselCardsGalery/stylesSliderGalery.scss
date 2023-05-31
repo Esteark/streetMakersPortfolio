@@ -1,0 +1,14 @@
+.secCarruselGalery {
+  width: 100%;
+  margin: 10px 0;
+  height: 250px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .secCarruselGalery {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 10px;
+  }
+}
