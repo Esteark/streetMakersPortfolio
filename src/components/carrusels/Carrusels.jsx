@@ -158,7 +158,7 @@ const Carrusels = ({
         keyboardNavigation={false}
         infinite={true}
         disableButtonsControls={
-          width >= 768 && op == 0 ? false : op != 0 ? true : false
+          op !== 0 ? true : op == 0 && width >= 768 ? false : true
         }
       />
     </section>
