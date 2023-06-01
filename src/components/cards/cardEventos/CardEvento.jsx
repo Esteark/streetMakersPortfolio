@@ -3,11 +3,12 @@ import "./stylesCardEvento.scss";
 
 const CardEvento = ({ img, text1, text2, icon, op }) => {
   return (
-    <figure className="cardEvento">
+    <figure className="CardEvento">
       <img
         src={img}
         alt=""
-        style={{ width: "100%", height: `${op == 0 ? "100%" : "40%"}` }}
+        className="imgCardEve"
+        style={{ height: `${op == 0 ? "100%" : "40%"}` }}
       />
       <figcaption style={{ display: `${op == 0 ? "none" : "flex"}` }}>
         <article className="sec1">

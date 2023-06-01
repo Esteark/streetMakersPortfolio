@@ -56,12 +56,12 @@ const Carrusels = ({
       items: 1,
     },
     370: {
-      items: 2,
+      items: 1,
       itemsFit: "fill",
     },
 
     568: {
-      items: 2,
+      items: 1,
       itemsFit: "fill",
     },
     668: {
