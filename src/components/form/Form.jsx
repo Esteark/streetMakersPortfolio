@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./stylesForm.scss";
 import { GrInstagram } from "react-icons/gr";
 import { SlArrowUp } from "react-icons/sl";
 import Swal from "sweetalert2";
 import { showNotify } from "../../services/Notify";
 import { useParams } from "react-router-dom";
+import { AppContext } from "../../router/Routers";
 
 const Form = () => {
   const [text, setText] = useState("");
   const reg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const { id } = useParams();
+  const { setSecNav } = useContext(AppContext);
   const showAlert = () => {
     if (text) {
       if (reg.test(text)) {
@@ -54,6 +56,7 @@ const Form = () => {
       top: 0,
       behavior: "smooth",
     });
+    setSecNav("");
   };
 
   return (

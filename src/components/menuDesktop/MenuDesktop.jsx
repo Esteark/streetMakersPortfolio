@@ -3,10 +3,10 @@ import icon from "../../assets/img/icon.svg";
 import menu from "../../assets/img/menu.svg";
 import "./stylesMenudesktop.scss";
 import { AppContext } from "../../router/Routers";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const MenuDesktop = () => {
-  const { handleScroll } = useContext(AppContext);
+  const { handleScroll, setSecNav } = useContext(AppContext);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -44,7 +44,13 @@ const MenuDesktop = () => {
         />
       </section>
       <section className="sec4 d-flex">
-        <h3>INSCRIPCIÓN</h3>
+        <h3
+          onClick={() => {
+            setSecNav("inscripcion");
+          }}
+        >
+          INSCRIPCIÓN
+        </h3>
       </section>
       <section className="sec5 d-flex">
         <a

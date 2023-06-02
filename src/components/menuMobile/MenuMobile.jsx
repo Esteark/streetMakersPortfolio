@@ -7,11 +7,13 @@ import { AppContext } from "../../router/Routers";
 
 const MenuMobile = () => {
   const { handleScroll, openMenu, handleMenu } = useContext(AppContext);
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   const navigate = useNavigate();
+
   useEffect(() => {
     console.log(openMenu);
   }, [openMenu]);

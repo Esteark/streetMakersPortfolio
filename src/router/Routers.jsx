@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../App/home/Home";
 import Galeria from "../App/galeria/Galeria";
 import Eventos from "../App/eventos/Eventos";
+import Form from "../components/form/Form";
 
 export const AppContext = createContext({});
 
@@ -16,6 +17,12 @@ const Routers = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const handleMenu = () => {
     setOpenMenu(!openMenu);
+  };
+  const [secNav, setSecNav] = useState("");
+  const handleSetActiveSection = (section, ref) => {
+    if (section === "inscripcion") {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const handleScroll = () => {
@@ -46,6 +53,9 @@ const Routers = () => {
         handleScroll,
         openMenu,
         handleMenu,
+        secNav,
+        setSecNav,
+        handleSetActiveSection,
       }}
     >
       <BrowserRouter>

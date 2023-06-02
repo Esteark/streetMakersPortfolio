@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./stylesHeaderGal.scss";
 import imgHeader1 from ".././../assets/img/galeria/header1.jpg";
 import imgHeader2 from ".././../assets/img/galeria/header2.jpg";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../../router/Routers";
 
 const HeaderGalery = () => {
+  const { setSecNav } = useContext(AppContext);
   const navigate = useNavigate();
   return (
     <section className="headerGal">
@@ -24,7 +26,13 @@ const HeaderGalery = () => {
           artística detrás de <span>proceso de diseño</span> que enriquece la
           experiencia visual de <span>Street Makers</span> en Medellín.
         </p>
-        <button>CONOCER MÁS</button>
+        <button
+          onClick={() => {
+            setSecNav("inscripcion");
+          }}
+        >
+          CONOCER MÁS
+        </button>
       </article>
     </section>
   );

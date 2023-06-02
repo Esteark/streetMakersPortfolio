@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import HeaderMobile from "../../components/headerMobile/HeaderMobile";
 import { AppContext } from "../../router/Routers";
 import LogoStreet from "../../components/logoStreet/LogoStreet";
@@ -15,15 +15,38 @@ import HeaderDesktop from "../../components/headerDesktop/HeaderDesktop";
 import MenuMobile from "../../components/menuMobile/MenuMobile";
 import CardPatrocinador from "../../components/cardPatrocinador/CardPatrocinador";
 import OptionsMenu from "../../components/menuMobile/options/OptionsMenu";
+import Loader from "../../components/loader/Loader";
 
 const Home = () => {
-  const { width } = useContext(AppContext);
+  const { width, handleSetActiveSection, secNav, setSecNav } =
+    useContext(AppContext);
+  const inscripcion = useRef(null);
 
   useEffect(() => {
     console.log(width);
   }, [width]);
+
+  useEffect(() => {
+    handleSetActiveSection(secNav, inscripcion);
+  }, [secNav]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY) {
+        setSecNav("");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <main>
+      <Loader />
       <ModalVideo />
       {width >= 768 ? (
         <MenuDesktop />
@@ -43,7 +66,10 @@ const Home = () => {
       <Banners />
       <CardPatrocinador />
       <section className="secInfoMain">
-        <Form />
+        <div ref={inscripcion}>
+          <Form />
+        </div>
+
         <SubMenu />
       </section>
       <Footer />

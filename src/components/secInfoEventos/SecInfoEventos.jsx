@@ -5,7 +5,7 @@ import imgInfoMobile from "../../assets/img/eventos/imgInfoMobile.png";
 import { AppContext } from "../../router/Routers";
 
 const SecInfoEventos = () => {
-  const { width } = useContext(AppContext);
+  const { width, setSecNav } = useContext(AppContext);
   return (
     <section className="secInfoEve">
       <h2>SOMOS REFERENTE URBANO</h2>
@@ -29,7 +29,13 @@ const SecInfoEventos = () => {
             empoderamiento y cambio, siendo <span>una poderosa voz</span> para
             una generación en busca de la libertad y superación.
           </p>
-          <button>CONOCER MÁS</button>
+          <button
+            onClick={() => {
+              setSecNav("inscripcion");
+            }}
+          >
+            CONOCER MÁS
+          </button>
         </div>
         <figure className="sec2">
           <img src={width > 768 ? imgInfo : imgInfoMobile} alt="" />

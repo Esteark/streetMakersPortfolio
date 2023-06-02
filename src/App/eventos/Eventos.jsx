@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import "./stylesEventos.scss";
 import { AppContext } from "../../router/Routers";
 import MenuDesktop from "../../components/menuDesktop/MenuDesktop";
@@ -15,11 +15,32 @@ import SecInfoEventos from "../../components/secInfoEventos/SecInfoEventos";
 import imgEventos from "../../assets/img/imgEventos.png";
 import CarruselEventos from "../../components/cards/carruselEventos/CarruselEventos";
 import GridEventos from "../../components/gridEventos/GridEventos";
+import Loader from "../../components/loader/Loader";
 
 const Eventos = () => {
-  const { width } = useContext(AppContext);
+  const { width, secNav, setSecNav, handleSetActiveSection } =
+    useContext(AppContext);
+  const inscripcion = useRef(null);
+  useEffect(() => {
+    handleSetActiveSection(secNav, inscripcion);
+  }, [secNav]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY) {
+        setSecNav("");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <section className="secEventos">
+      <Loader />
       {width >= 768 ? (
         <MenuDesktop />
       ) : (
@@ -48,7 +69,9 @@ const Eventos = () => {
         <Banners />
       </section>
       <section className="secInfoMain">
-        <Form />
+        <div ref={inscripcion}>
+          <Form />
+        </div>
         <SubMenu />
       </section>
       <Footer />

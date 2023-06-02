@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import "./stylesGaleria.scss";
 import { AppContext } from "../../router/Routers";
 import MenuDesktop from "../../components/menuDesktop/MenuDesktop";
@@ -11,11 +11,32 @@ import MainGalery from "../../components/mainGalery/MainGalery";
 import SubMenu from "../../components/subMenu/SubMenu";
 import Banners from "../../components/banners/Banners";
 import CarruselCardsGalery from "../../components/cards/carruselCardsGalery/CarruselCardsGalery";
+import Loader from "../../components/loader/Loader";
 
 const Galeria = () => {
-  const { width } = useContext(AppContext);
+  const { width, secNav, setSecNav, handleSetActiveSection } =
+    useContext(AppContext);
+  const inscripcion = useRef(null);
+  useEffect(() => {
+    handleSetActiveSection(secNav, inscripcion);
+  }, [secNav]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY) {
+        setSecNav("");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <section>
+      <Loader />
       {width >= 768 ? (
         <MenuDesktop />
       ) : (
@@ -32,7 +53,9 @@ const Galeria = () => {
         <Banners />
       </section>
       <section className="secInfoMain">
-        <Form />
+        <div ref={inscripcion}>
+          <Form />
+        </div>
         <SubMenu />
       </section>
       <Footer />

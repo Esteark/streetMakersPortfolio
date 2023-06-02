@@ -1,14 +1,16 @@
 import React, { useContext } from "react";
 import "./stylesOptions.scss";
 import { IoCloseCircle } from "react-icons/io5";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { AppContext } from "../../../router/Routers";
 
 const OptionsMenu = () => {
-  const location = useLocation();
   const navigate = useNavigate();
-  const { openMenu, handleMenu } = useContext(AppContext);
+  const { openMenu, handleMenu, setSecNav } = useContext(AppContext);
+  const instagramStreet = () => {
+    window.open("https://www.instagram.com/streetmakersmedellin/", "_blank");
+  };
 
   return (
     <motion.section
@@ -42,8 +44,15 @@ const OptionsMenu = () => {
         >
           Galeria
         </h3>
-        <h3>Inscripción</h3>
-        <h3>Más Info</h3>
+        <h3
+          onClick={() => {
+            setSecNav("inscripcion");
+            handleMenu();
+          }}
+        >
+          Inscripción
+        </h3>
+        <h3 onClick={instagramStreet}>Más Info</h3>
       </article>
     </motion.section>
   );
