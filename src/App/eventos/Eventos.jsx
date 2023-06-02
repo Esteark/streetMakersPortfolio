@@ -14,6 +14,7 @@ import LogoStreet from "../../components/logoStreet/LogoStreet";
 import SecInfoEventos from "../../components/secInfoEventos/SecInfoEventos";
 import imgEventos from "../../assets/img/imgEventos.png";
 import CarruselEventos from "../../components/cards/carruselEventos/CarruselEventos";
+import GridEventos from "../../components/gridEventos/GridEventos";
 
 const Eventos = () => {
   const { width } = useContext(AppContext);
@@ -31,9 +32,7 @@ const Eventos = () => {
       <LogoStreet op={1} />
       <SecInfoEventos />
       <section className="secMainEventos">
-        <h2 style={{ display: `${width > 768 ? "none" : "block"}` }}>
-          ALGO DE HISTORIA
-        </h2>
+        <h2>ALGO DE HISTORIA</h2>
         {width <= 768 ? (
           <section className="secMainEventos-Mobile">
             <CarruselEventos />
@@ -42,7 +41,7 @@ const Eventos = () => {
             </figure>
           </section>
         ) : (
-          <section className="secMainEventos-Desktop"></section>
+          <GridEventos />
         )}
       </section>
       <section>

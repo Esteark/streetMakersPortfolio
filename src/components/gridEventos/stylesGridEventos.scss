@@ -1,0 +1,121 @@
+@use "../../vars.scss" as v;
+.secGridEventos {
+  width: 100%;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  figcaption {
+    width: 100%;
+    height: 40%;
+    background-color: v.$secondaryBlackColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    div {
+      width: 80%;
+      color: v.$mainWhite;
+      h3 {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      p {
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+    span {
+      background-color: v.$green;
+      width: 60px;
+      height: 60px;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  &-sec1 {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    width: 100%;
+
+    .secCardEvento1 {
+      display: flex;
+      flex-direction: column;
+    }
+    .seccion1 {
+      display: flex;
+      gap: 10px;
+      figure {
+        width: calc(50% - 5px);
+        height: 366px;
+        img {
+          width: 100%;
+          object-fit: cover;
+          height: 100%;
+        }
+      }
+    }
+    .seccion2 {
+      width: 100%;
+      display: flex;
+      gap: 7px;
+      figure {
+        width: calc(33.33% - 10px);
+        margin-right: 6px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        img {
+          width: 100%;
+          height: 50%;
+          object-fit: cover;
+        }
+        figcaption {
+          height: 50%;
+          div {
+            width: 80%;
+            padding-right: 10px;
+          }
+        }
+      }
+      figure:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &-sec2 {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    height: 1140px;
+
+    img {
+      width: calc(50% - 5px);
+      object-fit: cover;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: calc(50% - 5px);
+      figure {
+        width: 100%;
+        height: calc(33.33% - 5px);
+        display: flex;
+        flex-direction: column;
+        img {
+          width: 100%;
+          height: 60%;
+        }
+      }
+    }
+  }
+}

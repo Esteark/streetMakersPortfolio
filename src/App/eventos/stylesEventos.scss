@@ -25,3 +25,15 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .secEventos {
+    .secMainEventos {
+      h2 {
+        font-size: 100px;
+        padding: 30px 10%;
+        padding-top: 0;
+      }
+    }
+  }
+}
