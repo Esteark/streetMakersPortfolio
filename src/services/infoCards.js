@@ -28,14 +28,14 @@ import product12 from "../assets/img/cardsGaleria/12.jpg";
 import product13 from "../assets/img/cardsGaleria/13.jpg";
 import product14 from "../assets/img/cardsGaleria/14.jpg";
 import product15 from "../assets/img/cardsGaleria/15.jpg";
-import imgEve1 from "../assets/img/cardsEventos/mob/1.png";
-import imgEve2 from "../assets/img/cardsEventos/mob/2.png";
-import imgEve3 from "../assets/img/cardsEventos/mob/3.png";
-import imgEve4 from "../assets/img/cardsEventos/mob/4.png";
-import imgEve5 from "../assets/img/cardsEventos/mob/5.png";
-import imgEve6 from "../assets/img/cardsEventos/mob/6.png";
-import imgEve7 from "../assets/img/cardsEventos/mob/7.png";
-import imgEve8 from "../assets/img/cardsEventos/mob/8.png";
+import imgEve1 from "../assets/img/cardsEventos/desk/1.png";
+import imgEve2 from "../assets/img/cardsEventos/desk/2.png";
+import imgEve3 from "../assets/img/cardsEventos/desk/3.png";
+import imgEve4 from "../assets/img/cardsEventos/desk/4.png";
+import imgEve5 from "../assets/img/cardsEventos/desk/5.png";
+import imgEve6 from "../assets/img/cardsEventos/desk/6.png";
+import imgEve7 from "../assets/img/cardsEventos/desk/7.png";
+import imgEve8 from "../assets/img/cardsEventos/desk/8.png";
 
 //Objeto con toda la información para las cards del home
 export const CardsHome = [
