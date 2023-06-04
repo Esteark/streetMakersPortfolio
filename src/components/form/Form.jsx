@@ -7,8 +7,9 @@ import { showNotify } from "../../services/Notify";
 import { useParams } from "react-router-dom";
 import { AppContext } from "../../router/Routers";
 
-const Form = () => {
+const Form = ({ ref }) => {
   const [text, setText] = useState("");
+
   const reg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const { id } = useParams();
   const { setSecNav } = useContext(AppContext);

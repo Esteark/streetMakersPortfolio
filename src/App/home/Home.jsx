@@ -66,10 +66,12 @@ const Home = () => {
       <CardPatrocinador />
       <section className="secInfoMain">
         <div ref={inscripcion}>
-          <Form />
+          <Form ref={inscripcion} />
         </div>
 
-        <SubMenu />
+        <div>
+          <SubMenu />
+        </div>
       </section>
       <Footer />
     </main>

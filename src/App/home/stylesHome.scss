@@ -9,5 +9,8 @@
 @media (min-width: 768px) {
   .secInfoMain {
     flex-direction: row;
+    div {
+      width: 50%;
+    }
   }
 }
