@@ -19,10 +19,82 @@
 @media (min-width: 768px) {
   .secBanners {
     &-texts {
-      height: 250px;
+      height: 150px;
+
+      img {
+        height: 100px;
+      }
+    }
+  }
+}
+
+@media (min-width: 922px) {
+  .secBanners {
+    &-texts {
+      height: 200px;
+
+      img {
+        height: 150px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .secBanners {
+    &-texts {
+      height: 230px;
 
       img {
         height: 180px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .secBanners {
+    &-texts {
+      height: 250px;
+
+      img {
+        height: 200px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1800px) {
+  .secBanners {
+    &-texts {
+      height: 300px;
+
+      img {
+        height: 220px;
+      }
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .secBanners {
+    &-texts {
+      height: 330px;
+
+      img {
+        height: 260px;
+      }
+    }
+  }
+}
+
+@media (min-width: 3000px) {
+  .secBanners {
+    &-texts {
+      height: 530px;
+
+      img {
+        height: 460px;
       }
     }
   }

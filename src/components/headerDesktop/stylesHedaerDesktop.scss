@@ -128,22 +128,71 @@
   }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 3000px) {
   .headerDesktop {
     .item {
       &-mouth {
         img {
-          transform: translate(-70px, -230px);
-          width: 200px;
-          height: 330px;
+          transform: translate(50px, -250px);
+          width: 290px;
+          height: 420px;
         }
       }
 
       &-Texts {
         .sec1 {
-          transform: translate(-130px, 70px);
+          transform: translate(-80px, 20px);
           h2 {
-            font-size: 100px;
+            font-size: 150px;
+          }
+          &-icons {
+            gap: 5px;
+            .iconEve {
+              font-size: 25px;
+              background: v.$green;
+              padding: 5px;
+              border-radius: 50px;
+              color: v.$mainBlackColor;
+              cursor: pointer;
+              img {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+        .sec2 {
+          transform: translate(10px, 180px);
+          h2 {
+            font-size: 150px;
+          }
+          &-subtexts {
+            gap: 20px;
+            transform: translate(350px, -10px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1800px) {
+  .headerDesktop {
+    .item {
+      &-mouth {
+        img {
+          transform: translate(-20px, -230px);
+          width: 230px;
+          height: 360px;
+        }
+      }
+
+      &-Texts {
+        .sec1 {
+          transform: translate(-130px, 20px);
+          h2 {
+            font-size: 150px;
           }
           &-icons {
             gap: 5px;
@@ -165,7 +214,56 @@
         .sec2 {
           transform: translate(-90px, 180px);
           h2 {
-            font-size: 100px;
+            font-size: 150px;
+          }
+          &-subtexts {
+            gap: 20px;
+            transform: translate(350px, -10px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .headerDesktop {
+    .item {
+      &-mouth {
+        img {
+          transform: translate(-70px, -230px);
+          width: 200px;
+          height: 330px;
+        }
+      }
+
+      &-Texts {
+        .sec1 {
+          transform: translate(-130px, 50px);
+          h2 {
+            font-size: 130px;
+          }
+          &-icons {
+            gap: 5px;
+            .iconEve {
+              font-size: 25px;
+              background: v.$green;
+              padding: 5px;
+              border-radius: 50px;
+              color: v.$mainBlackColor;
+              cursor: pointer;
+              img {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+        .sec2 {
+          transform: translate(-90px, 180px);
+          h2 {
+            font-size: 130px;
           }
           &-subtexts {
             gap: 20px;

@@ -49,9 +49,8 @@ const Galeria = () => {
       <MainGalery />
       <CarruselCardsGalery />
 
-      <section>
-        <Banners />
-      </section>
+      <Banners />
+
       <section className="secInfoMain">
         <div ref={inscripcion}>
           <Form />

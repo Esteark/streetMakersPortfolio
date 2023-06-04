@@ -23,3 +23,23 @@
     }
   }
 }
+
+@media (min-width: 1800px) {
+  .secBanners-cards {
+    height: 650px;
+
+    img {
+      height: 80%;
+    }
+  }
+}
+
+@media (min-width: 3000px) {
+  .secBanners-cards {
+    height: 900px;
+
+    img {
+      height: 90%;
+    }
+  }
+}

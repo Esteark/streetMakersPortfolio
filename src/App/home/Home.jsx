@@ -59,7 +59,6 @@ const Home = () => {
       {width < 768 ? <HeaderMobile /> : <HeaderDesktop />};
       <LogoStreet />
       <section className="CarruselHome">
-        <h2>CRECE LA CULTURA HIP HOP </h2>
         <CarruselCardsHome />
       </section>
       <Video />
