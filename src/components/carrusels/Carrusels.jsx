@@ -160,6 +160,8 @@ const Carrusels = ({
         disableButtonsControls={
           op !== 0 ? true : op == 0 && width >= 768 ? false : true
         }
+        autoPlay
+        autoPlayInterval={5000}
       />
     </section>
   );
