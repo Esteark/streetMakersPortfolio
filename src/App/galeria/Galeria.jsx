@@ -55,7 +55,9 @@ const Galeria = () => {
         <div ref={inscripcion}>
           <Form />
         </div>
-        <SubMenu />
+        <div>
+          <SubMenu />
+        </div>
       </section>
       <Footer />
     </section>
