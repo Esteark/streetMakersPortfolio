@@ -9,6 +9,9 @@ import { AppContext } from "../../router/Routers";
 
 const Form = ({ ref }) => {
   const [text, setText] = useState("");
+  const instagramStreet = () => {
+    window.open("https://www.instagram.com/streetmakersmedellin/", "_blank");
+  };
 
   const reg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const { id } = useParams();
@@ -64,7 +67,7 @@ const Form = ({ ref }) => {
     <section className="secForm" id={id}>
       <article className="secForm_header">
         <h3>ENTRADA LIBRE con boletería</h3>
-        <GrInstagram className="icon" />
+        <GrInstagram className="icon" onClick={instagramStreet} />
       </article>
       <article className="secForm_input">
         <h2>INSCRIPCIÓN</h2>
