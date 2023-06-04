@@ -192,7 +192,7 @@
         .sec1 {
           transform: translate(-130px, 20px);
           h2 {
-            font-size: 150px;
+            font-size: 130px;
           }
           &-icons {
             gap: 5px;
@@ -214,7 +214,7 @@
         .sec2 {
           transform: translate(-90px, 180px);
           h2 {
-            font-size: 150px;
+            font-size: 130px;
           }
           &-subtexts {
             gap: 20px;
@@ -241,7 +241,7 @@
         .sec1 {
           transform: translate(-130px, 50px);
           h2 {
-            font-size: 130px;
+            font-size: 120px;
           }
           &-icons {
             gap: 5px;
@@ -261,13 +261,13 @@
           }
         }
         .sec2 {
-          transform: translate(-90px, 180px);
+          transform: translate(-100px, 180px);
           h2 {
-            font-size: 130px;
+            font-size: 120px;
           }
           &-subtexts {
             gap: 20px;
-            transform: translate(250px, -10px);
+            transform: translate(220px, -10px);
           }
         }
       }
