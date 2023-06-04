@@ -14,8 +14,10 @@ const LogoStreet = ({ op = 0 }) => {
         transform: `${
           (op != 0) & (width <= 768)
             ? "translateY(-110px)"
-            : op != 0 && width > 768
+            : op != 0 && width > 768 && width <= 1399
             ? "translateY(-310px)"
+            : op != 0 && width >= 1400 && width <= 3000
+            ? "translateY(-280px)"
             : ""
         }`,
       }}

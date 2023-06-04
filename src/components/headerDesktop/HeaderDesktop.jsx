@@ -55,7 +55,11 @@ const HeaderDesktop = ({ op = 0 }) => {
           </div>
         </div>
         <div className="sec2">
-          <h2 style={{ transform: `${op != 0 ? "translate" : ""}` }}>
+          <h2
+            style={{
+              transform: `${op != 0 ? "translateY(10px)" : ""}`,
+            }}
+          >
             {op == 0 ? "EL GÉNERO" : "EL CONTEXTO"}
           </h2>
           <div
